@@ -21,12 +21,14 @@
 
     <Button
         android:id="@+id/capture_btn"
-        android:backgroundTint="@color/black"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:layout_width="100dp"
+        android:padding="5dp"
+        android:textSize="60sp"
+        android:textColor="@color/cardview_shadow_start_color"
+
+        android:layout_height="103dp"
         android:textAllCaps="true"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/take_photo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,10 +36,9 @@
 
     <Button
         android:id="@+id/flipbtn"
-        android:layout_width="60dp"
-        android:backgroundTint="@color/black"
+        android:layout_width="50dp"
         android:background="@drawable/baseline_flip_camera_ios_24"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/capture_btn"
