@@ -32,5 +32,16 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="10dp"/>
 
+    <Button
+        android:id="@+id/flipbtn"
+        android:layout_width="60dp"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/baseline_flip_camera_ios_24"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/capture_btn"
+        app:layout_constraintTop_toBottomOf="@+id/Preview" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

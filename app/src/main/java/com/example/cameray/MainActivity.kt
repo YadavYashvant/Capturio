@@ -51,6 +51,15 @@ class MainActivity : AppCompatActivity() {
         cameraController.bindToLifecycle(this)
         cameraController.cameraSelector = CameraSelector.DEFAULT_FRONT_CAMERA
         preview.controller = cameraController
+
+        viewBinding.flipbtn.setOnClickListener {
+            if(cameraController.cameraSelector == CameraSelector.DEFAULT_FRONT_CAMERA) {
+                cameraController.cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+            }
+            else{
+                cameraController.cameraSelector = CameraSelector.DEFAULT_FRONT_CAMERA
+            }
+        }
     }
 
     private fun takePhoto() {
