@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CameraY</string>
+    <string name="take_photo">Capture</string>
+</resources>
