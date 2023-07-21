@@ -41,8 +41,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewBinding.captureBtn.setOnClickListener {
+            viewBinding.captureBtn.animate().apply {
+                duration = 500
+                translationX(40f)
+                translationX(40f)
+            }.withEndAction{
+                viewBinding.captureBtn.animate().apply {
+                    duration = 500
+                    translationX(-40f)
+                    translationX(-40f)
+                }.start()
+            }
             takePhoto()
         }
+
     }
 
     private fun startCamera() {
@@ -53,6 +65,18 @@ class MainActivity : AppCompatActivity() {
         preview.controller = cameraController
 
         viewBinding.flipbtn.setOnClickListener {
+
+            //Button flip animation
+            viewBinding.flipbtn.animate().apply {
+                duration = 1000
+                rotationYBy(180f)
+            }.withEndAction {
+                viewBinding.flipbtn.animate().apply {
+                    duration = 1000
+                    translationZ(34f)
+                }.start()
+            }
+
             if(cameraController.cameraSelector == CameraSelector.DEFAULT_FRONT_CAMERA) {
                 cameraController.cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
             }
