@@ -9,11 +9,12 @@
 
     <androidx.camera.view.PreviewView
         android:id="@+id/Preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_margin="7dp"
         android:background="@drawable/round_container"
         android:clipToOutline="true"
-        android:layout_width="match_parent"
-        android:layout_height="590dp"
+        app:layout_constraintBottom_toTopOf="@+id/capture_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +22,7 @@
     <Button
         android:id="@+id/capture_btn"
         android:backgroundTint="@color/black"
-        android:layout_width="130dp"
+        android:layout_width="120dp"
         android:layout_height="120dp"
         android:textAllCaps="true"
         android:fontFamily="sans-serif-black"
@@ -29,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Preview" />
+        android:layout_marginBottom="10dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
