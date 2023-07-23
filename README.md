@@ -1,2 +1,2 @@
 # Capturio
-A camera app using CameraX library in kotlin.
+A camera app made in kotlin.
