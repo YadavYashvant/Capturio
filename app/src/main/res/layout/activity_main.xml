@@ -21,12 +21,12 @@
 
     <Button
         android:id="@+id/capture_btn"
-        android:backgroundTint="@color/cardview_dark_background"
+        android:background="@drawable/shutter_container"
+        android:clipToOutline="true"
         android:layout_width="100dp"
         android:padding="5dp"
         android:textSize="60sp"
         android:textColor="@color/cardview_shadow_start_color"
-
         android:layout_height="103dp"
         android:textAllCaps="true"
         app:layout_constraintBottom_toBottomOf="parent"
