@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
             viewBinding.animationview.playAnimation()
 
-            /*
+
             viewBinding.captureBtn.animate().apply {
                 duration = 500
                 translationX(40f)
@@ -56,11 +56,20 @@ class MainActivity : AppCompatActivity() {
                     translationX(-40f)
                     translationX(-40f)
                 }.start()
-            } */
+            }
 
             takePhoto()
 
+        }
 
+        viewBinding.animationview.setOnClickListener {
+            if ( viewBinding.animationview.isAnimating ) {
+                viewBinding.animationview.pauseAnimation()
+            }
+            else {
+                viewBinding.animationview.playAnimation()
+            }
+            takePhoto()
         }
 
     }
@@ -120,7 +129,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-                    val msg = "Photo captured: ${output.savedUri}"
+                    val msg = "Photo captured at: ${output.savedUri}"
                     Toast.makeText(baseContext,msg, Toast.LENGTH_SHORT).show()
                     Log.d(TAG,msg)
                 }
@@ -162,4 +171,5 @@ class MainActivity : AppCompatActivity() {
             ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
         }
     }
+
 }
