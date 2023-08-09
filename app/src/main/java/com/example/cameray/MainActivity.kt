@@ -63,12 +63,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewBinding.animationview.setOnClickListener {
-            if ( viewBinding.animationview.isAnimating ) {
-                viewBinding.animationview.pauseAnimation()
-            }
-            else {
-                viewBinding.animationview.playAnimation()
-            }
+
+            viewBinding.animationview.playAnimation()
+
             takePhoto()
         }
 
@@ -129,9 +126,9 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-                    val msg = "Photo captured at: ${output.savedUri}"
-                    Toast.makeText(baseContext,msg, Toast.LENGTH_SHORT).show()
-                    Log.d(TAG,msg)
+                    //val msg = "Photo captured at: ${output.savedUri}"
+                    //Toast.makeText(baseContext,msg, Toast.LENGTH_SHORT).show()
+                    //Log.d(TAG,msg)
                 }
             }
         )

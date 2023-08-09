@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/black"
+    android:background="#E5E5E5"
     >
 
     <androidx.camera.view.PreviewView
@@ -28,14 +28,15 @@
         android:layout_height="0dp"
         android:padding="5dp"
         android:layout_margin="7dp"
+        android:layout_marginStart="2dp"
         android:layout_marginBottom="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/capture_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Preview"
         app:lottie_autoPlay="false"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/cameralb1" />
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/lottiecapture" />
 
     <Button
         android:id="@+id/capture_btn"
