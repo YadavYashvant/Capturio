@@ -42,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewBinding.captureBtn.setOnClickListener {
+
+            viewBinding.animationview.playAnimation()
+
+            /*
             viewBinding.captureBtn.animate().apply {
                 duration = 500
                 translationX(40f)
@@ -52,8 +56,11 @@ class MainActivity : AppCompatActivity() {
                     translationX(-40f)
                     translationX(-40f)
                 }.start()
-            }
+            } */
+
             takePhoto()
+
+
         }
 
     }
