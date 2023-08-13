@@ -134,7 +134,7 @@ class MainActivity : AppCompatActivity() {
             }
         )
     }
-
+    //launching if permissions are granted
     private val activityResultLauncher =
         registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions())
         { permissions ->
