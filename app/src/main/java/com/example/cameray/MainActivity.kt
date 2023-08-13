@@ -107,6 +107,7 @@ class MainActivity : AppCompatActivity() {
             put(MediaStore.MediaColumns.DISPLAY_NAME, name)
             put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
             if(Build.VERSION.SDK_INT > Build.VERSION_CODES.P) {
+                //Puts in a directory as specified
                 put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/Capturio-Images")
             }
         }
