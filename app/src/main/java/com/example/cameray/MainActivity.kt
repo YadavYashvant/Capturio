@@ -2,8 +2,10 @@ package com.example.cameray
 
 import android.content.ContentValues
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.icu.text.SimpleDateFormat
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -66,8 +68,11 @@ class MainActivity : AppCompatActivity() {
 
             //will try to replace it with a gallery opening intent and animation will be at capture button on capturing
             viewBinding.animationview.playAnimation()
-
-            takePhoto()
+            val intent = Intent(
+                Intent.ACTION_VIEW, Uri.parse(
+                    "content://media/internal/images/media"
+                ))
+            startActivity(intent)
         }
 
     }
