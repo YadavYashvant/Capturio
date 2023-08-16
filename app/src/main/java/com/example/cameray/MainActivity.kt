@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
 
         viewBinding.animationview.setOnClickListener {
 
+            //will try to replace it with a gallery opening intent and animation will be at capture button on capturing
             viewBinding.animationview.playAnimation()
 
             takePhoto()
