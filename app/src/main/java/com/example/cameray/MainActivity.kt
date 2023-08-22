@@ -123,6 +123,7 @@ class MainActivity : AppCompatActivity() {
                     //val msg = "Photo captured at: ${output.savedUri}"
                     //Toast.makeText(baseContext,msg, Toast.LENGTH_SHORT).show()
                     //Log.d(TAG,msg)
+                    Toast.makeText(baseContext,"Photo Taken",Toast.LENGTH_SHORT).show()
                 }
             }
         )
