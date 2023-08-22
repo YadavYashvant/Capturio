@@ -43,12 +43,11 @@ class MainActivity : AppCompatActivity() {
             startCamera()
         }
 
-        /*
         viewBinding.captureBtn.setOnClickListener {
 
-            viewBinding.animationview.playAnimation()
+            viewBinding.captureBtn.playAnimation()
 
-
+            /*
             viewBinding.captureBtn.animate().apply {
                 duration = 500
                 translationX(40f)
@@ -61,22 +60,21 @@ class MainActivity : AppCompatActivity() {
                 }.start()
             }
 
+             */
+
             takePhoto()
 
         }
-         */
 
         viewBinding.animationview.setOnClickListener {
 
             //will try to replace it with a gallery opening intent and animation will be at capture button on capturing
-            viewBinding.animationview.playAnimation()
-            takePhoto()
-            /*val intent = Intent(
+            viewBinding.captureBtn.playAnimation()
+            val intent = Intent(
                 Intent.ACTION_VIEW, Uri.parse(
                     "content://media/internal/images/media"
                 ))
             startActivity(intent)
-             */
         }
 
     }
