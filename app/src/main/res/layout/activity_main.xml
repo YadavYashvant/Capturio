@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="#E5E5E5"
-    >
+    tools:context=".MainActivity">
 
     <androidx.camera.view.PreviewView
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:id="@+id/Preview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/round_container"
         android:clipToOutline="true"
-        app:layout_constraintBottom_toTopOf="@+id/capture_btn"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,19 +25,19 @@
         android:id="@+id/animationview"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="5dp"
         android:layout_margin="7dp"
         android:layout_marginStart="2dp"
         android:layout_marginBottom="7dp"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/capture_btn"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Preview"
-        app:lottie_autoPlay="false"
+        app:lottie_autoPlay="true"
         app:lottie_loop="false"
         app:lottie_rawRes="@raw/lottiecapture" />
 
-    <Button
+    <!--Button
         android:id="@+id/capture_btn"
         android:background="@drawable/shutter_container"
         android:clipToOutline="true"
@@ -51,17 +50,31 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"/-->
 
     <Button
         android:id="@+id/flipbtn"
         android:layout_width="50dp"
-        android:background="@drawable/baseline_flip_camera_ios_24"
         android:layout_height="50dp"
+        android:background="@drawable/baseline_flip_camera_ios_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/capture_btn"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/Preview" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="608dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="219dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
