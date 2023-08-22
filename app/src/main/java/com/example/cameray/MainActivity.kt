@@ -47,21 +47,6 @@ class MainActivity : AppCompatActivity() {
 
             viewBinding.captureBtn.playAnimation()
 
-            /*
-            viewBinding.captureBtn.animate().apply {
-                duration = 500
-                translationX(40f)
-                translationX(40f)
-            }.withEndAction{
-                viewBinding.captureBtn.animate().apply {
-                    duration = 500
-                    translationX(-40f)
-                    translationX(-40f)
-                }.start()
-            }
-
-             */
-
             takePhoto()
 
         }
